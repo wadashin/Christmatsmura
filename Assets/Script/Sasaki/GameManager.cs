@@ -53,6 +53,11 @@ public class GameManager : MonoBehaviour
         {
             m_totalTime -= Time.deltaTime;
             m_seconds = (int)m_totalTime;
+            if(m_totalTime <= 0)
+            {
+                m_isLose = true; //時間切れで敗北
+                m_isStop = true;
+            }
         }
 
         m_timeText.text = "残り時間: " + m_seconds.ToString() + "秒";
@@ -62,7 +67,8 @@ public class GameManager : MonoBehaviour
         switch (m_state)
         {
             case GameState.Present:
-
+                m_kyori = m_score;
+                m_kmINT = (int)m_kyori;
                 break;
             case GameState.Kitaku:
                 if(m_kyori >= 0)
