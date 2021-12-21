@@ -6,9 +6,9 @@ public class Playersc : MonoBehaviour
 {
 
     public Rigidbody rb;
-    [SerializeField] float upFore = 80;
-    [SerializeField] float Top = 10;
-    [SerializeField] float Bottom = -5;
+    [SerializeField] float upFore = 80;//上昇力   
+    [SerializeField] float Top = 10;//画面上部
+    [SerializeField] float Bottom = -5;//画面下部
 
     // Start is called before the first frame update
     void Start()
@@ -36,13 +36,13 @@ public class Playersc : MonoBehaviour
         }
     }
 
-    private void Jump()
+    private void Jump()//左クリックでプレイヤージャンプ
     {
         rb.velocity = Vector3.zero;
         rb.AddForce(transform.up * upFore, ForceMode.Impulse);
         
     }
-    private void AutoJump()
+    private void AutoJump()//最下部で自動ジャンプ
     {
         rb.velocity = Vector3.zero;
         rb.AddForce(transform.up * 10, ForceMode.Impulse);
