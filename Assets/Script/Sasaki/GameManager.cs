@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] Text m_timeText = default; //時間表記
 
+    [SerializeField] GameObject m_resultsPanel = default; //リザルト表示
+
+    [SerializeField] Text m_resultsText = default; //勝敗
+
     float m_accel = 0; //加速力
 
     bool m_isLose = false;
@@ -41,6 +45,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        m_resultsPanel.SetActive(false);
         m_state = GameState.Present;
         m_score = 0;
         m_kyori = 0;
@@ -78,14 +83,15 @@ public class GameManager : MonoBehaviour
                 }
                 break;
             case GameState.Results:
+                m_resultsPanel.SetActive(true);
                 //勝敗を判定
                 if(m_isLose == false)
                 {
-
+                    m_resultsText.text = "クリア！";
                 }
                 else
                 {
-
+                    m_resultsText.text = "失敗...";
                 }
                 break;
         }
