@@ -26,6 +26,7 @@ public class Reducedistance : MonoBehaviour
     [SerializeField]
     float fadeOutMoveDistance = 80f;
     [SerializeField] bool moving;
+    [SerializeField] GameObject GetImage;
 
     void Start()
     {
@@ -56,14 +57,16 @@ public class Reducedistance : MonoBehaviour
     {
         if(moving == false)
         {
+            //フェードイン
             moving = true;
+            GetImage.SetActive(true);
             SubtractionText.enabled = true;
             SubtractionText.DOFade(1f, fadeInTime);
             SubtractionText.rectTransform.DOLocalMoveY(fadeInMoveDistance, fadeInTime)
                 .SetRelative(true)
                 .OnComplete(() =>
                 {
-                    //[leady]上へ移動＋フェードアウト
+                    //フェードアウト
                     SubtractionText.DOFade(0f, fadeOutTime)
                     .SetDelay(delayTime);
                     SubtractionText.rectTransform.DOLocalMoveY(fadeOutMoveDistance, fadeOutTime)
@@ -71,14 +74,11 @@ public class Reducedistance : MonoBehaviour
                     .SetDelay(0.4f)
                     .OnComplete(() =>
                     {
-                        SubtractionText.rectTransform.DOLocalMoveY(-fadeInMoveDistance, fadeOutTime);
+                        GetImage.SetActive(false);
+                        SubtractionText.rectTransform.DOLocalMoveY(-40, fadeOutTime);
                         moving = false;
                     });
                 });
-        }
-        else
-        {
-
         }
 
     }
