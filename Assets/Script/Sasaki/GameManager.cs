@@ -23,13 +23,15 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] Text m_timeText = default; //時間表記
 
-    float m_accel = 0; //加速力
+    float m_accel = 2; //加速力
 
     bool m_isLose = false;
 
     [SerializeField] GameObject m_resultPannel = default; //リザルト画面
 
     [SerializeField] Text m_winOrLose = default;
+
+    [SerializeField] GameObject[] m_gameStateObj = new GameObject[2]; //各フェイズを管理する親オブジェクトたち
 
     /// <summary>
     /// ゲームの状況
@@ -49,6 +51,8 @@ public class GameManager : MonoBehaviour
         m_score = 0;
         m_kyori = 0;
         m_resultPannel.SetActive(false);
+        m_gameStateObj[0].SetActive(true);
+        m_gameStateObj[1].SetActive(false);
     }
 
     // Update is called once per frame
@@ -81,8 +85,13 @@ public class GameManager : MonoBehaviour
                     m_kyori -= Time.deltaTime * m_accel;
                     m_kmINT = (int)m_kyori;
                 }
+                else
+                {
+                    m_state = GameState.Results;
+                }
                 break;
             case GameState.Results:
+                m_isStop = true;
                 m_resultPannel.SetActive(true);
                 //勝敗を判定
                 if(m_isLose == false)
