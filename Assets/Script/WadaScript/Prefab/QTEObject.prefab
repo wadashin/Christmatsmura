@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3920434137658523273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3920434137658523279}
+  - component: {fileID: 3920434137658523272}
+  m_Layer: 0
+  m_Name: QTEObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3920434137658523279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3920434137658523273}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 370.5, y: 514, z: 188}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3920434137658523272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3920434137658523273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec2d13fdb52406b4d91fc91ca32ebb73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _RandomMax: 13
+  _Text: {fileID: 0}
+  _Image: {fileID: 0}
+  _Button: {fileID: 0}
+  RedHouse: {fileID: 6488497263743019752, guid: 0ceff442f8c0e54408263062f7665d80,
+    type: 3}
+  BlueHouse: {fileID: 3405842234382691472, guid: ed5884383e5c951439d449a2c834325b,
+    type: 3}
+  YellowHouse: {fileID: 2368927171209006326, guid: c43309e2534e297429fa18f1f02764fa,
+    type: 3}
+  moveHouse: 1
