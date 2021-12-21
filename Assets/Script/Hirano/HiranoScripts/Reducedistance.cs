@@ -28,9 +28,9 @@ public class Reducedistance : MonoBehaviour
     [SerializeField] bool moving;
     [SerializeField] GameObject GetImage;
 
+
     void Start()
     {
-
         SubtractionText.enabled = false;
         text.text = "残りの距離は : " + distance.ToString() + "km";
         audioSource = sound.GetComponent<AudioSource>();
@@ -40,13 +40,17 @@ public class Reducedistance : MonoBehaviour
     {
         if(other.gameObject.tag == "Item")
         {
+            //合計距離を計算
             kekka = distance - reduce;
+            //減った距離を計算
             kekka2 = distance - kekka;
             kekka = Mathf.Clamp(kekka, 0, 100000000);
             audioSource.Play();
+            //減った距離を表示
             SubtractionText.text = "-" + kekka2;
             Destroy(other.gameObject);
             Fadeo();
+            //計算結果を代入
             DOTween.To(() => distance, (n) => distance = n, kekka, 0.1f)
                 .OnUpdate(() => text.text = "残りの距離は : " + distance.ToString() + "km");
         }
@@ -59,6 +63,7 @@ public class Reducedistance : MonoBehaviour
         {
             //フェードイン
             moving = true;
+
             GetImage.SetActive(true);
             SubtractionText.enabled = true;
             SubtractionText.DOFade(1f, fadeInTime);
@@ -74,6 +79,7 @@ public class Reducedistance : MonoBehaviour
                     .SetDelay(0.4f)
                     .OnComplete(() =>
                     {
+                        //指定された位置に戻る
                         GetImage.SetActive(false);
                         SubtractionText.rectTransform.DOLocalMoveY(-40, fadeOutTime);
                         moving = false;
