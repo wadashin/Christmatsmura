@@ -9,9 +9,18 @@ public class QTEScript : MonoBehaviour
     [SerializeField] Text _Text;
     [SerializeField] Image _Image;
     [SerializeField] Button _Button;
+    [SerializeField] GameObject RedHouse;
+    [SerializeField] GameObject BlueHouse;
+    [SerializeField] GameObject YellowHouse;
 
     //Random関数で出したランダムな数
     int randamNumber = 0;
+
+    //家を動かすか否か
+    public bool moveHouse = false;
+
+    //家を入れる配列
+    //GameObject[] house = new GameObject[3];
 
     //QTEをする状態かどうか。trueがQTE中、falseが移動中
     //bool qTESwitch = true;
@@ -20,12 +29,23 @@ public class QTEScript : MonoBehaviour
         SetUI();
         MakeRandom();
         QTE();
+
+        //house[0] = RedHouse;
+        //house[1] = BlueHouse;
+        //house[2] = YellowHouse;
+        //Instantiate(house[0]);
+        //Instantiate(house[1]);
+        //Instantiate(house[2]);
+        //house[0].transform.position = new Vector3(0, 0, house[1].transform.position.z + 2);
+        //house[1].transform.position = new Vector3(0, 0, 0);
+        //house[2].transform.position = new Vector3(0, 0, house[1].transform.position.z - 2);
     }
 
     void Update()
     {
         QTE();
-        Debug.Log(randamNumber);
+        Move();
+        //Debug.Log(house[1].transform.position);
     }
 
     /// <summary>
@@ -276,7 +296,10 @@ public class QTEScript : MonoBehaviour
 
     void Move()
     {
-        
+        //if(house[0].transform.position.z >= 2)
+        //{
+        //    house[1].transform.position = new Vector3(0, 0, 2);
+        //}
     }
     void SetUI()
     {
@@ -293,9 +316,25 @@ public class QTEScript : MonoBehaviour
     //QTEでボタンをクリックした時の処理
     public void Click()
     {
-        Debug.Log("yes");
         _Button.gameObject.SetActive(false);
         _Text.gameObject.SetActive(true);
         MakeRandom();
     }
+
+    //void RandomHouse()
+    //{
+    //    int houseRandom = Random.Range(0, 3);
+    //    switch(houseRandom)
+    //    {
+    //        case 0:
+    //            house[2] = RedHouse;
+    //            break;
+    //        case 1:
+    //            house[2] = BlueHouse;
+    //            break;
+    //        case 2:
+    //            house[2] = YellowHouse;
+    //            break;
+    //    }
+    //}
 }
