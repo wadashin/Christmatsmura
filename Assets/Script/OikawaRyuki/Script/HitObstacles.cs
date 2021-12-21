@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class HitObstacles : MonoBehaviour
 {
+    [SerializeField] Image _frostImage;
     [SerializeField] int time;
     [SerializeField] int reduce;
     private int kekka;
@@ -25,33 +26,40 @@ public class HitObstacles : MonoBehaviour
     float fadeInMoveDistance = 80f;
     [SerializeField]
     float fadeOutMoveDistance = 80f;
-    [SerializeField] bool moving;
+    private bool moving;
+    private bool _isFrost;
 
     void Start()
     {
-
         SubtractionText.enabled = false;
-        text.text = "残りの距離は : " + time.ToString() + "km";
+        text.text = "残りの時間は : " + time.ToString();
         //audioSource = sound.GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        print("aaa");
-        if(other.CompareTag("Obstacle"))
-        kekka = time - reduce;
-        kekka2 = time - kekka;
-        kekka = Mathf.Clamp(kekka, 0, 100000000);
-        //audioSource.Play();
-        SubtractionText.text = "-" + kekka2;
-        Fadeo();
-        DOTween.To(() => time, (n) => time = n, kekka, 0.1f)
-            .OnUpdate(() => text.text = "残りの距離は : " + time.ToString() + "km");
+        if (other.CompareTag("Obstacle"))
+        {
+            kekka = time - reduce;
+            kekka2 = time - kekka;
+            kekka = Mathf.Clamp(kekka, 0, 100000000);
+            //audioSource.Play();
+            SubtractionText.text = "-" + kekka2;
+            Fadeo();
+            DOTween.To(() => time, (n) => time = n, kekka, 0.1f)
+                .OnUpdate(() => text.text = "残りの時間は : " + time.ToString());            
+        }
     }
 
+    public void Reset()
+    {
+        Sequence sequence = DOTween.Sequence().Append(_frostImage.DOFade(0f, 1f)).AppendCallback(() => { _frostImage.enabled = false; })
+            .OnComplete(() => { _isFrost = false; });
+        
+    }
     public void Fadeo()
     {
-        if (moving == false)
+        if (!moving)
         {
             moving = true;
             SubtractionText.enabled = true;
@@ -68,14 +76,16 @@ public class HitObstacles : MonoBehaviour
                     .SetDelay(0.4f)
                     .OnComplete(() =>
                     {
-                        SubtractionText.rectTransform.DOLocalMoveY(-fadeInMoveDistance, fadeOutTime);
+                        SubtractionText.rectTransform.DOLocalMoveY(0, fadeOutTime);
                         moving = false;
                     });
                 });
         }
-        else
+        if (!_isFrost)
         {
-
+            _isFrost = true;
+            _frostImage.enabled = true;
+            Sequence sequence = DOTween.Sequence().Append(_frostImage.DOFade(1f, 0.3f)).AppendCallback(() => { Invoke("Reset", 2f); });
         }
     }
 }
