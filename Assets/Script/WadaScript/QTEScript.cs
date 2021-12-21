@@ -14,7 +14,7 @@ public class QTEScript : MonoBehaviour
     int randamNumber = 0;
 
     //QTEをする状態かどうか。trueがQTE中、falseが移動中
-    bool qTESwitch = true;
+    //bool qTESwitch = true;
     void Start()
     {
         SetUI();
@@ -271,7 +271,7 @@ public class QTEScript : MonoBehaviour
 
     void MakeRandom()
     {
-        randamNumber = Random.Range(1, _RandomMax);
+        randamNumber = Random.Range(1, _RandomMax + 1);
     }
 
     void Move()
@@ -294,6 +294,8 @@ public class QTEScript : MonoBehaviour
     public void Click()
     {
         Debug.Log("yes");
+        _Button.gameObject.SetActive(false);
+        _Text.gameObject.SetActive(true);
         MakeRandom();
     }
 }
