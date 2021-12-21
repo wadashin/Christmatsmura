@@ -27,6 +27,10 @@ public class GameManager : MonoBehaviour
 
     bool m_isLose = false;
 
+    [SerializeField] GameObject m_resultPannel = default; //リザルト画面
+
+    [SerializeField] Text m_winOrLose = default;
+
     /// <summary>
     /// ゲームの状況
     /// </summary>
@@ -44,6 +48,7 @@ public class GameManager : MonoBehaviour
         m_state = GameState.Present;
         m_score = 0;
         m_kyori = 0;
+        m_resultPannel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -78,14 +83,15 @@ public class GameManager : MonoBehaviour
                 }
                 break;
             case GameState.Results:
+                m_resultPannel.SetActive(true);
                 //勝敗を判定
                 if(m_isLose == false)
                 {
-
+                    m_winOrLose.text = "クリア！";
                 }
                 else
                 {
-
+                    m_winOrLose.text = "逮捕ァ！";
                 }
                 break;
         }
