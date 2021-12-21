@@ -8,12 +8,11 @@ public class Kitaku : MonoBehaviour
     [SerializeField] GameObject _scene2;
     private Animation _anime;
 
-    private float _changTime = 5f;
+    private float _changTime = 2f;
 
     public void Kitakufeiz()
     {
-        _anime = GameObject.Find("chang").GetComponent<Animation>();
-        _anime.
+        //_anime = GameObject.Find("chang").GetComponent<Animation>();
         _scene1.SetActive(false);
         StartCoroutine(change());
     }
