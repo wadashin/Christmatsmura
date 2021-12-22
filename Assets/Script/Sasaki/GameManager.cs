@@ -119,7 +119,7 @@ public class GameManager : MonoBehaviour
                 }
                 if(Input.GetKeyDown(KeyCode.Space))
                 {
-                    SceneManager.LoadScene("WadaTitle");
+                    SceneManager.LoadScene("TitleOikawaRyuki");
                 }
                 break;
         }
