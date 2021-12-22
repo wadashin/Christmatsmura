@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
                 //勝敗を判定
                 if(m_isLose == false)
                 {
-                    m_winOrLose.text = "クリア！";
+                    m_winOrLose.text = "終了ァ！";
                 }
                 else
                 {
