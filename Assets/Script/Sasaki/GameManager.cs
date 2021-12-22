@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public float m_kyori { get; set; } //距離実数値
     public int m_kmINT { get; set; } //距離表記値
 
-    [SerializeField] float m_totalTime = 120;
+    [SerializeField] public float m_totalTime = 120;
 
     public int m_seconds { get; set; } //制限時間の実数値
 

@@ -10,6 +10,10 @@ public class Playersc : MonoBehaviour
     [SerializeField] float Top = 10;//画面上部
     [SerializeField] float Bottom = -5;//画面下部
 
+    [SerializeField] GameManager m_gm = default;
+
+    [SerializeField] UnityEngine.Events.UnityEvent m_OnObst = null; //障害物にぶつかったときに音を鳴らす
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,4 +51,11 @@ public class Playersc : MonoBehaviour
         rb.velocity = Vector3.zero;
         rb.AddForce(transform.up * 10, ForceMode.Impulse);
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        m_gm.m_totalTime -= 5;
+        m_OnObst.Invoke();
+    }
+
 }
