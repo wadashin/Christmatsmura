@@ -66,7 +66,7 @@ public class Playersc : MonoBehaviour
         }
         else
         {
-            m_gm
+            m_gm.m_accel += 2;
         }
     }
 
