@@ -15,17 +15,16 @@ public class Present : MonoBehaviour
     private Rigidbody rb;
     private void Start()
     {
-        _player = GameObject.Find("Player");
+        _player = GameObject.Find("ChMD_kurisumatummura_prefab");
         rb = this.GetComponent<Rigidbody>();
-        _playerPos = _player.transform.position + Vector3.down;
-        _presentScale = new Vector3(1, 1, 1);
+        _playerPos = _player.transform.position+Vector3.right;
+        _presentScale = this.transform.localScale;
         ScaleChange();
     }
 
     private void FixedUpdate()
     {
         rb.AddForce(transform.up * -_fallSpeed, ForceMode.Force);
-        print(transform.localScale);
         if (this.transform.position.y <= _destroyPos)
         {
             this.gameObject.transform.localScale = _presentScale;
@@ -38,7 +37,7 @@ public class Present : MonoBehaviour
     {
         if (other.CompareTag("House"))
         {
-            other.transform.DOScale(1.5f, 0.2f);
+            other.transform.DOScale(1.3f, 0.2f);
             this.gameObject.transform.localScale = _presentScale;
             this.gameObject.transform.position = _playerPos;
             rb.velocity = Vector3.zero;
@@ -47,6 +46,6 @@ public class Present : MonoBehaviour
     }
     private void ScaleChange()
     {
-        transform.DOScale(0.1f, 7f);
+        transform.DOScale(0.05f, 2f).SetEase(Ease.InQuart);
     }
 }
