@@ -1,0 +1,207 @@
+fileFormatVersion: 2
+guid: 581bbdb16d5edbb49b801955a76c450e
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube235Mat
+    second: {fileID: 2100000, guid: fe2aee5092bd3f04ab2c55b91b176c30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube236Mat
+    second: {fileID: 2100000, guid: d088318c055d112408743e7a2466ef7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube237Mat
+    second: {fileID: 2100000, guid: 6797655f4fcb2da4396c178a70d6fcaa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube238Mat
+    second: {fileID: 2100000, guid: 3cbc3ced8557bbc438fbe9815a692b7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube239Mat
+    second: {fileID: 2100000, guid: bb03dfbc010561a4990952d2b19b843f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube240Mat
+    second: {fileID: 2100000, guid: 4d328b664fa91d94cb3b9513f2b802a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube241Mat
+    second: {fileID: 2100000, guid: 937f8cbeaf0909e45ab055ab387bd154, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube242Mat
+    second: {fileID: 2100000, guid: 67483e69a3074db4f925411bc9dacffe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube243Mat
+    second: {fileID: 2100000, guid: 5d0636a311eff01418ef723673b1597a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube244Mat
+    second: {fileID: 2100000, guid: 019af58f4c8eb7049a3739d76b53a748, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube245Mat
+    second: {fileID: 2100000, guid: 5e9217987e872ae44a6e31b6dea153ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube246Mat
+    second: {fileID: 2100000, guid: f1d380d1f1aa78a4ab0a27af88a2f31c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube247Mat
+    second: {fileID: 2100000, guid: 35294af7c2ee683428fd6163dd8ba836, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube248Mat
+    second: {fileID: 2100000, guid: 88230a55bd1b343418056faa0c01d5c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube249Mat
+    second: {fileID: 2100000, guid: f3b425d1d24a3c44286bad033101b348, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube250Mat
+    second: {fileID: 2100000, guid: 7b90f32a082bb1449a8225a64780108d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pPlane1Mat
+    second: {fileID: 2100000, guid: 6fb322608cc0437489dc36929a29128e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: textureEditorIsolateSelectSet_pCube236Mat
+    second: {fileID: 2100000, guid: 175f54d051e501a4c906c9d84965768e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: textureEditorIsolateSelectSet_pCube239Mat
+    second: {fileID: 2100000, guid: 5fcf88a60b0c7ae488c4e4131ba3b42f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: textureEditorIsolateSelectSet_pCube243Mat
+    second: {fileID: 2100000, guid: 483d9a217a0fb4049a57bb9ab14a8248, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: textureEditorIsolateSelectSet_pCube247Mat
+    second: {fileID: 2100000, guid: 2dffe44089799334d9a257aad0bd8b83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: textureEditorIsolateSelectSet_pCube249Mat
+    second: {fileID: 2100000, guid: eff6846fcddc7334b890af9f44316038, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
