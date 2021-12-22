@@ -27,18 +27,18 @@ public class TitleScript : MonoBehaviour
         {
             SceneManager.LoadScene("GamePlayScene");
         }
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            Click();
-        }
+        //if(Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    Click();
+        //}
     }
     void Click()
     {
         int i = Random.Range(1, 100);
         scoreRank.Add(i);
         scoreRank.Sort((a, b) => b - a);
-        _RankText1st.text = "最もますむらなスコア  " + scoreRank[0].ToString();
-        _RankText2nd.text = "次にますむらなスコア  " + scoreRank[1].ToString();
-        _RankText3rd.text = "ややますむらなスコア  " + scoreRank[2].ToString();
+        _RankText1st.text = "最もますむらなスコア " + scoreRank[0].ToString();
+        _RankText2nd.text = "次にますむらなスコア " + scoreRank[1].ToString();
+        _RankText3rd.text = "ややますむらなスコア " + scoreRank[2].ToString();
     }
 }

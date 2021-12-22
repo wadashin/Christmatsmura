@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
                 {
                     m_winOrLose.text = "逮捕ァ！";
                 }
-                if(Input.GetButton("Fire1"))
+                if(Input.GetKeyDown(KeyCode.Space))
                 {
                     SceneManager.LoadScene("WadaTitle");
                 }
