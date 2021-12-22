@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] Text m_timeText = default; //時間表記
 
-    float m_accel = 2; //加速力
+    public float m_accel = 2; //加速力
 
     bool m_isLose = false;
 

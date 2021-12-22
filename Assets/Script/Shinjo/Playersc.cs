@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Playersc : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Playersc : MonoBehaviour
     [SerializeField] float Bottom = -5;//画面下部
 
     [SerializeField] GameManager m_gm = default;
+
+    [SerializeField] Text m_timeText = default; //時間表記
 
     [SerializeField] UnityEngine.Events.UnityEvent m_OnObst = null; //障害物にぶつかったときに音を鳴らす
 
@@ -54,8 +57,17 @@ public class Playersc : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        m_gm.m_totalTime -= 5;
-        m_OnObst.Invoke();
+        if(other.tag == "Obstacle")
+        {
+            m_gm.m_totalTime -= 5;
+            m_gm.m_seconds = (int)m_gm.m_totalTime;
+            m_timeText.text = "残り時間: " + m_gm.m_seconds.ToString() + "秒";
+            m_OnObst.Invoke();
+        }
+        else
+        {
+            m_gm
+        }
     }
 
 }

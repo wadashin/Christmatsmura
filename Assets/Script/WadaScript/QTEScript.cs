@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class QTEScript : MonoBehaviour
 {
+    [SerializeField] UnityEngine.Events.UnityEvent m_onQTEShot = null; //QTEで音鳴らす
+
     [SerializeField] int m_point = 10; //１加点量
 
     bool m_isPulusPoint = false; //加点するか否か
@@ -296,6 +298,7 @@ public class QTEScript : MonoBehaviour
 
     void MakeRandom()
     {
+        m_onQTEShot.Invoke();
         if(m_isPulusPoint == true)
         {
             GameManager.m_score += m_point;
