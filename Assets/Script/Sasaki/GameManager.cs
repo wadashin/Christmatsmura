@@ -36,6 +36,12 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] Text m_LastScore = default;
 
+    [SerializeField] GameObject m_bgm1 = default;
+    [SerializeField] GameObject m_bgm2 = default;
+
+    [SerializeField] GameObject m_reSE1 = default;
+    [SerializeField] GameObject m_reSE2 = default;
+
     /// <summary>
     /// ゲームの状況
     /// </summary>
@@ -116,11 +122,19 @@ public class GameManager : MonoBehaviour
                 //勝敗を判定
                 if (m_isLose == false)
                 {
+                    m_bgm1.SetActive(false);
+                    m_bgm2.SetActive(false);
+                    m_reSE1.SetActive(true);
+                    m_reSE2.SetActive(false);
                     m_winOrLose.text = "終了ァ！";
                     m_LastScore.text = "Score : " + m_score.ToString() + "クリス";
                 }
                 else
                 {
+                    m_bgm1.SetActive(false);
+                    m_bgm2.SetActive(false);
+                    m_reSE1.SetActive(false);
+                    m_reSE2.SetActive(true);
                     m_winOrLose.text = "逮捕ァ！";
                 }
                 if(Input.GetKeyDown(KeyCode.Space))
