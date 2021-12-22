@@ -10,12 +10,12 @@ public class Obstacle : MonoBehaviour
 {
     private AutoGenerate _scrollScript;
     [Header("背景を消して新たな背景を生成する位置")] public float _destroyPos=-15f;
-    [Header("横移動のスピード")] public float _scrollSpeed = -0.2f;
+    [Header("横移動のスピード")] public float _scrollSpeed = -0.15f;
 
 
     private void Start()
     {
-        _scrollScript = GameObject.Find("scrollManager").GetComponent<AutoGenerate>();
+        _scrollScript = GameObject.Find("Gene").GetComponent<AutoGenerate>();
     }
     private void FixedUpdate()
     {
