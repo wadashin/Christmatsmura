@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Script/OikawaRyuki/prefab/3543449_s.prefab.meta
 guid: 09c6f92e80bace9459ee30ef1680b928
 PrefabImporter:
+=======
+guid: 511cf3c9247d8894f87002305342c958
+NativeFormatImporter:
+>>>>>>> 334289d2849b290d3dd0a457aed476ab181885fa:Assets/Scenes/Xmasmura_prefab.controller.meta
   externalObjects: {}
+  mainObjectFileID: 9100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 

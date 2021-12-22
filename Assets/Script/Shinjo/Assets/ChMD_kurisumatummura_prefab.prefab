@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 92754104733544227}
   m_Layer: 0
-  m_Name: ChMD_kurisumatummura
+  m_Name: ChMD_kurisumatummura_prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,7 +89,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9b3cc013be851794ab7813343158851f, type: 2}
+  - {fileID: 2100000, guid: 117624f13db46b44eb86981473c691a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

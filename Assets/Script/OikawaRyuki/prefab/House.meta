@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Script/OikawaRyuki/prefab/House.meta
 guid: a7229f1feaf2aee409ec53a5e1bfb79d
+=======
+guid: f389e2291c471a34f84eb152c47feee2
+>>>>>>> 334289d2849b290d3dd0a457aed476ab181885fa:Assets/Script/Shinjo/Assets/Materials.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
