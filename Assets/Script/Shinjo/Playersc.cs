@@ -59,10 +59,13 @@ public class Playersc : MonoBehaviour
     {
         if(other.tag == "Obstacle")
         {
-            m_gm.m_totalTime -= 5;
-            m_gm.m_seconds = (int)m_gm.m_totalTime;
-            m_timeText.text = "残り時間: " + m_gm.m_seconds.ToString() + "秒";
-            m_OnObst.Invoke();
+            if (GameManager.m_state == GameManager.GameState.Present || GameManager.m_state == GameManager.GameState.Kitaku)
+            {
+                m_gm.m_totalTime -= 5;
+                m_gm.m_seconds = (int)m_gm.m_totalTime;
+                m_timeText.text = "残り時間: " + m_gm.m_seconds.ToString() + "秒";
+                m_OnObst.Invoke();
+            }
         }
         else
         {

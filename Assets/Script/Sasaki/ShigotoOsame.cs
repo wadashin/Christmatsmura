@@ -6,15 +6,9 @@ public class ShigotoOsame : MonoBehaviour
 {
     [SerializeField] GameObject[] m_gameStateObj = new GameObject[2]; //各フェイズを管理する親オブジェクトたち
 
-    float m_waitTime = 2; //処理待ち時間
+    float m_waitTime = 1; //処理待ち時間
 
     [SerializeField] GameObject me = default;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     public void PhaseChange()
     {
