@@ -14,6 +14,7 @@ public class Present : MonoBehaviour
     {
         _player = GameObject.Find("Player");
         _playerPos = _player.transform.position;
+        _playerPos -= Vector3.down;
     }
 
     private void FixedUpdate()
