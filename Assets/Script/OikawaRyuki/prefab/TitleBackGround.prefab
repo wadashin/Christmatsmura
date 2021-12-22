@@ -94,5 +94,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a17e95b1ca6e7f4fbae018b70db01eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _destroyPos: -20
+  _destroyPos: -22
   _scrollSpeed: -0.075
