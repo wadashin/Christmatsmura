@@ -16,6 +16,8 @@ public class Playersc : MonoBehaviour
     [SerializeField] Text m_timeText = default; //時間表記
 
     [SerializeField] UnityEngine.Events.UnityEvent m_OnObst = null; //障害物にぶつかったときに音を鳴らす
+    [SerializeField] UnityEngine.Events.UnityEvent m_OnAccel = null; //ボールにぶつかったときに音を鳴らす
+
 
     // Start is called before the first frame update
     void Start()
@@ -69,6 +71,7 @@ public class Playersc : MonoBehaviour
         }
         else
         {
+            m_OnAccel.Invoke();
             m_gm.m_accel += 2;
         }
     }
