@@ -53,8 +53,8 @@ public class GameManager : MonoBehaviour
         m_kyori = 0;
         m_sliderKyori.maxValue = m_kyori;
         m_sliderKyori.value = m_kyori;
-        m_sliderTime.maxValue = m_seconds;
-        m_sliderTime.value = m_seconds;
+        m_sliderTime.maxValue = m_totalTime;
+        m_sliderTime.value = m_totalTime;
         m_resultPannel.SetActive(false);
         m_gameStateObj[0].SetActive(true);
         m_gameStateObj[1].SetActive(false);
