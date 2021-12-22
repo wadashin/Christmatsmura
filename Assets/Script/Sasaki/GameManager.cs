@@ -93,14 +93,20 @@ public class GameManager : MonoBehaviour
             case GameState.Results:
                 m_isStop = true;
                 m_resultPannel.SetActive(true);
+                //タイトルにリザルトを持ち越す
+                TitleScript._TitleScore = m_score;
                 //勝敗を判定
-                if(m_isLose == false)
+                if (m_isLose == false)
                 {
                     m_winOrLose.text = "終了ァ！";
                 }
                 else
                 {
                     m_winOrLose.text = "逮捕ァ！";
+                }
+                if(Input.GetButton("Fire1"))
+                {
+                    SceneManager.LoadScene("WadaTitle");
                 }
                 break;
         }
