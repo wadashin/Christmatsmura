@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Script/OikawaRyuki/prefab/Blue.prefab.meta
+guid: 35edcb4e613f1a54595ed0203a132d76
+PrefabImporter:
+=======
 guid: cb9c9e058d14b1144ac0879d5c033b5f
 NativeFormatImporter:
+>>>>>>> 334289d2849b290d3dd0a457aed476ab181885fa:Assets/Script/Shinjo/Assets/Materials/ChTX_kurisumatumura_2.mat.meta
   externalObjects: {}
   mainObjectFileID: 2100000
   userData: 
