@@ -43,3 +43,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Rogo
+    uniqueID: 3800434545
+    locked: 0

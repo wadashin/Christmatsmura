@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public float m_kyori { get; set; } //距離実数値
     public int m_kmINT { get; set; } //距離表記値
 
-    [SerializeField] public float m_totalTime = 120;
+    [SerializeField] public float m_totalTime = 100;
 
     public int m_seconds { get; set; } //制限時間の実数値
 
@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject[] m_gameStateObj = new GameObject[2]; //各フェイズを管理する親オブジェクトたち
 
+    [SerializeField] Text m_LastScore = default;
+
     /// <summary>
     /// ゲームの状況
     /// </summary>
@@ -48,7 +50,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         m_isStop = false;
-        m_totalTime = 120;
+        m_totalTime = 100;
         m_state = GameState.Present;
         m_score = 0;
         m_kyori = 0;
@@ -79,9 +81,12 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        m_timeText.text = "残り時間: " + m_seconds.ToString() + "秒";
-        m_scoreText.text = "お前のクリス: " + m_score.ToString() + "クリス";
-        m_kyoriText.text = "自宅まで: " + m_kmINT.ToString() + "km";
+        if(m_state == GameState.Present || m_state == GameState.Kitaku)
+        {
+            m_timeText.text = "残り時間: " + m_seconds.ToString() + "秒";
+            m_scoreText.text = "お前のクリス: " + m_score.ToString() + "クリス";
+            m_kyoriText.text = "自宅まで: " + m_kmINT.ToString() + "km";
+        }
 
         switch (m_state)
         {
@@ -112,6 +117,7 @@ public class GameManager : MonoBehaviour
                 if (m_isLose == false)
                 {
                     m_winOrLose.text = "終了ァ！";
+                    m_LastScore.text = "Score : " + m_score.ToString() + "クリス";
                 }
                 else
                 {
