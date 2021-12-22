@@ -37,7 +37,7 @@ public class Present : MonoBehaviour
     {
         if (other.CompareTag("House"))
         {
-            other.transform.DOScale(1.3f, 0.2f);
+            other.transform.DOScale(0.4f, 0.2f);
             this.gameObject.transform.localScale = _presentScale;
             this.gameObject.transform.position = _playerPos;
             rb.velocity = Vector3.zero;
