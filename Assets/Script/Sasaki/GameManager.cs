@@ -20,8 +20,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] Text m_scoreText = default; //スコア表記
 
     [SerializeField] Text m_kyoriText = default; //距離表記
-
+    [SerializeField] Slider m_sliderKyori = default;
     [SerializeField] Text m_timeText = default; //時間表記
+    [SerializeField] Slider m_sliderTime = default;
 
     public float m_accel = 2; //加速力
 
@@ -50,6 +51,10 @@ public class GameManager : MonoBehaviour
         m_state = GameState.Present;
         m_score = 0;
         m_kyori = 0;
+        m_sliderKyori.maxValue = m_kyori;
+        m_sliderKyori.value = m_kyori;
+        m_sliderTime.maxValue = m_totalTime;
+        m_sliderTime.value = m_totalTime;
         m_resultPannel.SetActive(false);
         m_gameStateObj[0].SetActive(true);
         m_gameStateObj[1].SetActive(false);
@@ -58,7 +63,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(m_isStop == false)
+        m_sliderTime.value = m_seconds;
+
+        if (m_isStop == false)
         {
             m_totalTime -= Time.deltaTime;
             m_seconds = (int)m_totalTime;
@@ -76,11 +83,14 @@ public class GameManager : MonoBehaviour
         switch (m_state)
         {
             case GameState.Present:
+                m_sliderKyori.maxValue = m_kyori;
+                m_sliderKyori.value = m_kyori;
                 m_kyori = m_score;
                 m_kmINT = (int)m_kyori;
                 break;
             case GameState.Kitaku:
-                if(m_kyori >= 0)
+                m_sliderKyori.value = m_kyori;
+                if (m_kyori >= 0)
                 {
                     m_kyori -= Time.deltaTime * m_accel;
                     m_kmINT = (int)m_kyori;
