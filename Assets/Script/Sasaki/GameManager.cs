@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        m_totalTime = 120;
         m_state = GameState.Present;
         m_score = 0;
         m_kyori = 0;
