@@ -19,6 +19,11 @@ public class QTEScript : MonoBehaviour
     [SerializeField] GameObject RedHouse;
     [SerializeField] GameObject BlueHouse;
     [SerializeField] GameObject YellowHouse;
+    [SerializeField] GameObject _MasumuraFoot;
+    [SerializeField] GameObject _BoxRed;
+    [SerializeField] GameObject _Boxblue;
+    [SerializeField] GameObject _BoxYellow;
+    [SerializeField] GameObject _PresentMasumura;
 
     //Random関数で出したランダムな数
     int randamNumber = 0;
@@ -304,6 +309,26 @@ public class QTEScript : MonoBehaviour
             if(m_isPulusPoint == true)
             {
                 GameManager.m_score += m_point;
+                int i = Random.Range(1, 5);
+                switch(i)
+                {
+                    case 1:
+                        var boxr = Instantiate(_BoxRed);
+                        boxr.transform.position = _MasumuraFoot.transform.position;
+                        break;
+                    case 2:
+                        var boxb = Instantiate(_Boxblue);
+                        boxb.transform.position = _MasumuraFoot.transform.position;
+                        break;
+                    case 3:
+                        var boxy = Instantiate(_BoxYellow);
+                        boxy.transform.position = _MasumuraFoot.transform.position;
+                        break;
+                    case 4:
+                        var boxm = Instantiate(_PresentMasumura);
+                        boxm.transform.position = _MasumuraFoot.transform.position;
+                        break;
+                }
             }
             else
             {
