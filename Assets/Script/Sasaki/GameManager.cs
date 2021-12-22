@@ -45,8 +45,7 @@ public class GameManager : MonoBehaviour
     }
     public static GameState m_state = GameState.Present;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         m_isStop = false;
         m_totalTime = 120;
@@ -75,6 +74,8 @@ public class GameManager : MonoBehaviour
             {
                 m_isLose = true; //時間切れで敗北
                 m_isStop = true;
+                m_score = 0;
+                m_state = GameState.Results;
             }
         }
 
@@ -96,10 +97,6 @@ public class GameManager : MonoBehaviour
                 {
                     m_kyori -= Time.deltaTime * m_accel;
                     m_kmINT = (int)m_kyori;
-                }
-                else if(m_kyori >= 0 && m_totalTime <= 0)
-                {
-                    m_state = GameState.Results;
                 }
                 else
                 {

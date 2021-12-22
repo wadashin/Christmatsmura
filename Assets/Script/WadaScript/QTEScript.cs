@@ -299,15 +299,18 @@ public class QTEScript : MonoBehaviour
     void MakeRandom()
     {
         m_onQTEShot.Invoke();
-        if(m_isPulusPoint == true)
+        if(GameManager.m_isStop == false)
         {
-            GameManager.m_score += m_point;
+            if(m_isPulusPoint == true)
+            {
+                GameManager.m_score += m_point;
+            }
+            else
+            {
+                m_isPulusPoint = true;
+            }
+            randamNumber = Random.Range(1, _RandomMax + 1);
         }
-        else
-        {
-            m_isPulusPoint = true;
-        }
-        randamNumber = Random.Range(1, _RandomMax + 1);
     }
 
     void Move()
