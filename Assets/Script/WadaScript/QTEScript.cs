@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class QTEScript : MonoBehaviour
 {
+    [SerializeField] int m_point = 10; //１加点量
+
+    bool m_isPulusPoint = false; //加点するか否か
+
+
     [SerializeField] int _RandomMax = 13;
     [SerializeField] Text _Text;
     [SerializeField] Image _Image;
@@ -291,6 +296,14 @@ public class QTEScript : MonoBehaviour
 
     void MakeRandom()
     {
+        if(m_isPulusPoint == true)
+        {
+            GameManager.m_score += m_point;
+        }
+        else
+        {
+            m_isPulusPoint = true;
+        }
         randamNumber = Random.Range(1, _RandomMax + 1);
     }
 
